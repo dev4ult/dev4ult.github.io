@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background-color: rgb(233, 233, 233);
+}
+
+a,
+li,
+button {
+  font-family: 'Press Start 2P', cursive;
+  text-decoration: none;
+  color: #eeeeee;
+  font-size: 16px;
+}
+
+header#Navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #051d30;
+}
+
+li {
+  list-style: none;
+}
+
+nav #nav-links li {
+  display: inline-block;
+}
+
+a {
+  padding-right: 40px;
+}
+
+a:hover {
+  color: yellow;
+  transition: all 0.5s ease 0s;
+}
+
+button {
+  border: none;
+  background-color: rgb(228, 100, 100);
+  color: rgb(43, 26, 26);
+  padding: 5px 18px;
+  clip-path: polygon(9% 1%, 100% 0%, 91% 100%, 0% 100%);
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #39ff14;
+  color: #02080e;
+  transition: all 0.3s ease 0s;
+}
+
+/* Title */
+
+section#Title {
+  position: relative;
+  padding: 50px 0;
+  z-index: -1;
+  top: 19px;
+  background-color: #082033;
+  clip-path: polygon(0 0, 100% 0, 100% 89%, 60% 89%, 34% 100%, 0 100%);
+}
+
+div#container {
+  display: flex;
+  position: relative;
+  left: 100px;
+  align-items: center;
+}
+
+div#heart-container {
+  /* background-color: blue; */
+  width: 120px;
+  height: 120px;
+}
+
+div#Heart-clip {
+  background-color: rgb(231, 82, 82);
+  height: 100px;
+  width: 100px;
+  clip-path: polygon(25% 8%, 50% 26%, 75% 8%, 100% 25%, 80% 69%, 50% 96%, 20% 69%, 0 25%);
+  animation-name: heart;
+  animation-duration: 0.7s;
+  align-items: center;
+  margin: auto;
+  animation-iteration-count: infinite;
+}
+
+@keyframes heart {
+  70% {
+    height: 120px;
+    width: 120px;
+    background-color: rgb(211, 41, 41);
+  }
+}
+
+div#About {
+  /* border: 2px solid black; */
+  /* background: blue; */
+  width: 60%;
+  /* margin: auto; */
+  color: white;
+}
+
+h1 {
+  font-size: 40px;
+  font-family: 'Press Start 2P', cursive;
+}
+
+div#Description {
+  width: 65%;
+}
+
+p {
+  font-family: 'VT323', monospace;
+  font-size: 30px;
+}
+
+/* content */
+
+section#Content {
+  height: fit-content;
+  /* background-color: red; */
+  padding: 200px 0;
+}
+
+div#grid-container {
+  width: fit-content;
+  margin: auto;
+  display: grid;
+  grid-template-rows: 200px 200px;
+  grid-template-columns: 200px 220px 180px;
+  grid-gap: 3px;
+}
+
+div#pro1 {
+  clip-path: polygon(25% 0, 100% 0, 100% 75%, 75% 100%, 0 100%, 0 25%);
+  font-size: 60px;
+}
+
+div#pro1:hover {
+  box-shadow: inset 200px 0 0 0 rgb(255, 0, 68);
+}
+
+div#pro2 {
+  grid-column: 2 / 4;
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 89% 100%, 12.5% 100%, 0 75%);
+  font-size: 100px;
+}
+
+div#pro2:hover {
+  box-shadow: inset 0 200px 0 0 rgb(255, 0, 68);
+}
+
+div#pro3 {
+  clip-path: polygon(75% 0, 100% 33%, 100% 100%, 0 100%, 0 0);
+  height: 75%;
+  font-size: 50px;
+}
+
+div#pro3:hover {
+  box-shadow: inset 0 200px 0 0 rgb(255, 0, 68);
+}
+
+div#pro4 {
+  clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 25%, 23% 0);
+  font-size: 70px;
+}
+
+div#pro4:hover {
+  box-shadow: inset 250px 0 0 0 rgb(255, 0, 68);
+}
+
+div#pro5 {
+  width: 75%;
+  height: 75%;
+  font-size: 40px;
+}
+
+div#pro5:hover {
+  box-shadow: inset 0 0 0 200px rgb(255, 0, 68);
+}
+
+div.project {
+  background-color: rgb(19, 30, 44);
+  color: rgb(255, 235, 56);
+  font-family: 'Press Start 2P', cursive;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  box-shadow: inset 0 0 0 0 rgb(255, 0, 68);
+  transition: all 0.7s ease;
+}
+
+div.project:hover {
+  color: white;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #082033;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  padding: 50px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 100%, 0 100%, 0 25%);
+}
+
+a.socmed {
+  margin: 20px;
+}
+
+#insta,
+#twitter {
+  clip-path: polygon(15% 0, 85% 0, 100% 50%, 85% 100%, 15% 100%, 0% 50%);
+  padding: 9px 25px;
+  background-color: rgb(40, 241, 157);
+}
+
+#insta:hover {
+  background-color: #bc2a8d;
+}
+
+#twitter:hover {
+  background-color: #00acee;
+}
