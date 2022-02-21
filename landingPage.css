@@ -1,236 +1,224 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
+
+:root {
+  --bg-darker-blue: #051d30;
+  --bg-dark-blue: #06233b;
+  --bg-white-grad: #ebebeb;
+  --bg-light-red: rgb(255, 0, 68);
+
+  --button-bg: rgb(223, 95, 95);
+  --button-hover: #5fdba7;
+
+  --clr-dark-accent: white;
+  --clr-light-accent: rgb(37, 37, 37);
+
+  --clr-nav-hover: rgb(243, 232, 72);
+}
 
 body {
+  background-color: var(--bg-white-grad);
+}
+
+* {
   margin: 0;
-  overflow-x: hidden;
-  background-color: rgb(233, 233, 233);
-}
-
-a,
-li,
-button {
-  font-family: 'Press Start 2P', cursive;
-  text-decoration: none;
-  color: #eeeeee;
-  font-size: 16px;
-}
-
-header#Navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #051d30;
-  z-index: 2;
-}
-
-li {
-  list-style: none;
-}
-
-nav #nav-links li {
-  display: inline-block;
-}
-
-a {
-  padding-right: 40px;
-}
-
-a:hover {
-  color: yellow;
-  transition: all 0.5s ease 0s;
-}
-
-button {
-  border: none;
-  background-color: rgb(228, 100, 100);
-  color: rgb(43, 26, 26);
-  padding: 5px 18px;
-  clip-path: polygon(9% 1%, 100% 0%, 91% 100%, 0% 100%);
-  font-weight: bold;
-}
-
-button:hover {
-  background-color: #39ff14;
-  color: #02080e;
-  transition: all 0.3s ease 0s;
-}
-
-/* Title */
-
-section#Title {
-  position: relative;
-  padding: 50px 0;
-  z-index: -1;
-  top: 19px;
-  background-color: #082033;
-  clip-path: polygon(0 0, 100% 0, 100% 89%, 60% 89%, 34% 100%, 0 100%);
-}
-
-div#container {
-  display: flex;
-  position: relative;
-  left: 100px;
-  align-items: center;
-}
-
-div#heart-container {
-  /* background-color: blue; */
-  width: 120px;
-  height: 120px;
-}
-
-div#Heart-clip {
-  background-color: rgb(231, 82, 82);
-  height: 100px;
-  width: 100px;
-  clip-path: polygon(25% 8%, 50% 26%, 75% 8%, 100% 25%, 80% 69%, 50% 96%, 20% 69%, 0 25%);
-  animation-name: heart;
-  animation-duration: 0.7s;
-  align-items: center;
-  margin: auto;
-  animation-iteration-count: infinite;
-}
-
-@keyframes heart {
-  70% {
-    height: 120px;
-    width: 120px;
-    background-color: rgb(211, 41, 41);
-  }
-}
-
-div#About {
-  /* border: 2px solid black; */
-  /* background: blue; */
-  width: 60%;
-  /* margin: auto; */
-  color: white;
-}
-
-h1 {
-  font-size: 40px;
-  font-family: 'Press Start 2P', cursive;
-}
-
-div#Description {
-  width: 65%;
+  padding: 0;
+  font-family: 'Odibee Sans', cursive;
 }
 
 p {
-  font-family: 'VT323', monospace;
-  font-size: 30px;
+  font-size: 1.55rem;
 }
 
-/* content */
-
-section#Content {
-  height: fit-content;
-  /* background-color: red; */
-  padding: 200px 0;
+a {
+  text-decoration: none;
 }
 
-div#grid-container {
-  width: fit-content;
-  margin: auto;
+/* ===============
+   === NAV BAR ===
+   =============== */
+
+nav {
+  position: fixed;
   display: grid;
-  grid-template-rows: 200px 200px;
-  grid-template-columns: 200px 220px 180px;
-  grid-gap: 3px;
-}
-
-div#pro1 {
-  clip-path: polygon(25% 0, 100% 0, 100% 75%, 75% 100%, 0 100%, 0 25%);
-  font-size: 60px;
-}
-
-div#pro1:hover {
-  box-shadow: inset 200px 0 0 0 rgb(255, 0, 68);
-}
-
-div#pro2 {
-  grid-column: 2 / 4;
-  clip-path: polygon(0 0, 100% 0, 100% 75%, 89% 100%, 12.5% 100%, 0 75%);
-  font-size: 100px;
-}
-
-div#pro2:hover {
-  box-shadow: inset 0 200px 0 0 rgb(255, 0, 68);
-}
-
-div#pro3 {
-  clip-path: polygon(75% 0, 100% 33%, 100% 100%, 0 100%, 0 0);
-  height: 75%;
-  font-size: 50px;
-}
-
-div#pro3:hover {
-  box-shadow: inset 0 200px 0 0 rgb(255, 0, 68);
-}
-
-div#pro4 {
-  clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 25%, 23% 0);
-  font-size: 70px;
-}
-
-div#pro4:hover {
-  box-shadow: inset 250px 0 0 0 rgb(255, 0, 68);
-}
-
-div#pro5 {
-  width: 75%;
-  height: 75%;
-  font-size: 40px;
-}
-
-div#pro5:hover {
-  box-shadow: inset 0 0 0 200px rgb(255, 0, 68);
-}
-
-div.project {
-  background-color: rgb(19, 30, 44);
-  color: rgb(255, 235, 56);
-  font-family: 'Press Start 2P', cursive;
-  display: grid;
-  align-items: center;
   justify-items: center;
-  box-shadow: inset 0 0 0 0 rgb(255, 0, 68);
-  transition: all 0.7s ease;
-  z-index: 1;
+  align-items: center;
+  z-index: 2;
+  width: 100%;
+  background-color: var(--bg-darker-blue);
+  padding: 0.55rem 0;
 }
 
-div.project:hover {
-  color: white;
+#navbar {
+  width: 85%;
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-between;
+}
+
+#heart {
+  background-color: rgb(231, 82, 82);
+  width: 1.5rem;
+  height: 1.5rem;
+  clip-path: polygon(25% 8%, 50% 26%, 75% 8%, 100% 25%, 80% 69%, 50% 96%, 20% 69%, 0 25%);
+}
+
+#co-heart {
+  display: none;
+}
+
+#menu {
+  color: var(--clr-dark-accent);
+  font-size: 1.5rem;
   cursor: pointer;
 }
 
-footer {
-  background-color: #082033;
+#navlinks {
+  display: none;
+  background-color: var(--bg-darker-blue);
+  list-style: none;
+  position: absolute;
+  right: 0;
+  top: 6vh;
+  padding: 0 2rem;
+  padding-top: 1rem;
+}
+
+#menu:hover #navlinks {
   display: grid;
-  align-items: center;
   justify-items: center;
-  padding: 50px;
-  clip-path: polygon(50% 0%, 100% 25%, 100% 100%, 0 100%, 0 25%);
 }
 
-a.socmed {
-  margin: 20px;
+#navlinks li {
+  margin-bottom: 1.5rem;
 }
 
-#insta,
-#twitter {
-  clip-path: polygon(15% 0, 85% 0, 100% 50%, 85% 100%, 15% 100%, 0% 50%);
-  padding: 9px 25px;
-  background-color: rgb(40, 241, 157);
+#navlinks li a,
+button {
+  font-size: 1.125rem;
 }
 
-#insta:hover {
-  background-color: #bc2a8d;
+#navlinks li a {
+  color: var(--clr-dark-accent);
+  transition: 200ms ease;
 }
 
-#twitter:hover {
-  background-color: #00acee;
+#navlinks li a:hover {
+  color: var(--clr-nav-hover);
+  transition: 200ms ease;
+}
+
+button {
+  clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
+  padding: 0.3rem 1rem;
+  background-color: var(--button-bg);
+}
+
+/* ============
+   == HEADER ==
+   ============ */
+
+header {
+  text-align: center;
+  background-color: var(--bg-dark-blue);
+  color: var(--clr-dark-accent);
+  padding: 5rem 3rem;
+  clip-path: polygon(100% 0, 100% 95%, 50% 100%, 0 95%, 0 0);
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-family: 'Press Start 2P', cursive;
+}
+
+header p {
+  font-family: 'VT323', monospace;
+}
+
+/* =============
+   === MAIN ====
+   ============= */
+
+main {
+  padding: 1rem 1rem;
+}
+
+.title {
+  text-align: center;
+  width: 75%;
+  margin-inline: auto;
+}
+
+main section {
+  margin: 2rem 0;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 100;
+  /* letter-spacing: 0.125rem; */
+  font-family: 'Press Start 2P', cursive;
+}
+
+.grid-container {
+  display: grid;
+  justify-items: center;
+  grid-gap: 0.2rem;
+}
+
+.grid-container div {
+  position: relative;
+  display: grid;
+  margin: auto;
+  width: 90%;
+  padding: 1rem 1rem;
+  border-radius: 0.7rem;
+  background-color: rgb(31, 31, 31);
+  color: var(--clr-dark-accent);
+  z-index: 1;
+}
+
+.grid-container div::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-radius: 0.7rem;
+  background-color: var(--bg-light-red);
+  transition: 300ms ease;
+}
+
+.grid-container div:hover::before {
+  right: 100%;
+  transition: 300ms ease;
+}
+
+main section div p {
+  line-height: 1.2;
+  /* display: none; */
+}
+
+.title,
+h3 {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+/* =============
+   === About ===
+   ============= */
+
+#about {
+  /* background-color: red; */
+}
+
+#grid-container-1 {
 }
