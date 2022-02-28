@@ -10,14 +10,14 @@
   <body>
     <nav>
       <div id="navbar">
-        <div id="heart"></div>
-        <div id="co-heart"><a href="">Pixgeon</a></div>
-        <div id="menu">
+        <div class="align-center" id="heart"></div>
+        <div class="align-center" id="logo-text"><a href="">Pixgeon</a></div>
+        <div class="align-center" id="menu">
           <ul id="navlinks">
-            <li><a href="">About</a></li>
-            <li><a href="">Fun-floor</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#fun-floor">Fun-floor</a></li>
             <li>
-              <button>Login</button>
+              <button id="login">Login</button>
             </li>
           </ul>
           <span id="plus">+</span>
@@ -26,11 +26,16 @@
     </nav>
 
     <header>
-      <div>
+      <div id="header-text">
         <h1>Pixgeon</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, voluptate!</p>
       </div>
     </header>
+    <div id="arrow">
+      <div id="arrow-left"></div>
+      <div id="arrow-right"></div>
+    </div>
+
     <main>
       <section id="about">
         <div class="title">
@@ -38,48 +43,129 @@
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, voluptatum.</p>
         </div>
         <div class="grid-container" id="container--1">
-          <div>
-            <h3>Pixgeon : The Alternate Universe</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore ut voluptas aut! Adipisci, nemo quod.</p>
+          <div class="grid-content div--1">
+            <div class="hide--content">
+              <h3>Pixgeon : The Alternate Universe</h3>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore ut voluptas aut! Adipisci, nemo quod.</p>
+            </div>
           </div>
-          <div>
-            <h3>Free Source Lesson</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore, ea?</p>
+          <div class="grid-content div--2">
+            <div class="hide--content">
+              <h3>Free Source Lesson</h3>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore, ea?</p>
+            </div>
           </div>
-          <div>
-            <h3>Minecraft Server</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <div class="grid-content div--3">
+            <div class="hide--content">
+              <h3>Minecraft Server</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
           </div>
-          <div>
-            <h3>Dev Team</h3>
-            <p>Lorem ipsum dolor sit amet.</p>
+          <div class="grid-content div--4">
+            <div class="hide--content">
+              <h3>Dev Team</h3>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
           </div>
-          <div>
-            <h3>Latest Activity</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <div class="grid-content div--5">
+            <div class="hide--content">
+              <h3>Latest Activity</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
           </div>
         </div>
       </section>
-      <section id="brick"></section>
+
+      <section id="border">
+        <div id="bricks-1" class="bricks">
+          <div class="bricks-start">
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+          </div>
+          <div class="bricks-center">
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+          </div>
+          <div class="bricks-end">
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+          </div>
+        </div>
+        <div id="bricks-2" class="bricks">
+          <div class="bricks-start">
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+          </div>
+          <div class="bricks-center">
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+          </div>
+          <div class="bricks-end">
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+          </div>
+        </div>
+        <div id="bricks-3" class="bricks">
+          <div class="bricks-start">
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+          </div>
+          <div class="bricks-center">
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+          </div>
+          <div class="bricks-end">
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+          </div>
+        </div>
+        <div id="bricks-4" class="bricks">
+          <div class="bricks-start">
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+          </div>
+          <div class="bricks-center">
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+          </div>
+          <div class="bricks-end">
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+          </div>
+        </div>
+      </section>
+
       <section id="fun-floor">
         <div class="title">
           <h2>Fun Floor</h2>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo fugiat eaque earum optio, assumenda quibusdam vitae repellendus obcaecati veritatis modi expedita possimus aut ipsum omnis.</p>
         </div>
         <div class="grid-container" id="container--2">
-          <div>
+          <div class="grid-content div--1">
             <h3>GAME#1</h3>
           </div>
-          <div>
+          <div class="grid-content div--2">
             <h3>GAME#2</h3>
           </div>
-          <div>
+          <div class="grid-content div--3">
             <h3>GAME#3</h3>
           </div>
-          <div>
+          <div class="grid-content div--4">
             <h3>GAME#4</h3>
           </div>
-          <div>
+          <div class="grid-content div--5">
             <h3>GAME#5</h3>
           </div>
         </div>
