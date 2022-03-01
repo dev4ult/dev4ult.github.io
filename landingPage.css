@@ -177,12 +177,11 @@ header {
   background-color: var(--bg-dark-blue);
   color: var(--clr-dark-accent);
   padding: 7rem 3rem 4rem 3rem;
-  outline: 4px black;
   clip-path: polygon(100% 0, 100% 95%, 50% 100%, 0 95%, 0 0);
 }
 
 h1 {
-  font-size: 1.75rem;
+  font-size: 1.7rem;
   margin-bottom: 1rem;
   font-family: 'Press Start 2P', cursive;
 }
@@ -238,15 +237,26 @@ h2 {
 
 h3 {
   font-size: 1rem;
-  font-weight: 100;
-  /* letter-spacing: 0.125rem; */
+  font-weight: 900;
   font-family: 'Press Start 2P', cursive;
+}
+
+.content-desc {
+  opacity: 0;
+  transition: 400ms ease;
+}
+
+.grid-content:hover .content-desc {
+  opacity: 1;
+  transition: 400ms ease;
 }
 
 .grid-container {
   display: grid;
-  grid-gap: 0.7rem;
-  max-width: 1200px;
+  position: relative;
+  width: 93%;
+  grid-gap: 0.6rem;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -254,6 +264,7 @@ h3 {
   .grid-container {
     grid-template-rows: 33% 33% 33%;
     grid-template-columns: 25% 25% 25% 25%;
+    left: -1rem;
   }
 
   .div--1 {
@@ -352,27 +363,6 @@ h3 {
   right: 0;
 }
 
-/* .grid-content::before {
-  position: absolute;
-  content: '';
-  display: grid;
-  align-items: center;
-  justify-items: center;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  background-color: var(--bg-light-red);
-  transition: 500ms ease;
-}
-
-.grid-content:hover::before {
-  opacity: 0;
-  transition: 500ms ease;
-  content: '';
-  border: none;
-} */
-
 main section div p {
   line-height: 1.2;
 }
@@ -387,6 +377,84 @@ h3 {
    === ABOUT ===
    ============= */
 
+#dev-team {
+  background-color: white;
+  background-image: url('asset/dev-team.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  color: var(--bg-content);
+  box-shadow: inset 0 0 0 3px rgb(102, 102, 102);
+}
+
+#dev-team:hover {
+  background-image: url('asset/dev-team-outline.png');
+  box-shadow: inset 0 0 0 3.3px black;
+  color: black;
+}
+
+#dev-team p {
+  color: black;
+}
+
+#dev-team::before,
+#dev-team::after {
+  background-color: rgb(180, 180, 180);
+}
+
+#dev-team::before {
+  box-shadow: inset 0 -1.5px 0 1.5px rgb(102, 102, 102);
+}
+
+#dev-team:hover::before {
+  box-shadow: inset 0 -1.5px 0 1.5px black;
+}
+
+#dev-team::after {
+  box-shadow: inset -1.5px 0 0 1.5px rgb(102, 102, 102);
+}
+
+#dev-team:hover::after {
+  box-shadow: inset -1.5px 0 0 1.5px black;
+}
+
+/* ================================================ */
+
+#late-act {
+  background-image: url('asset/latest-activity.png');
+  background-color: rgb(226, 156, 64);
+  box-shadow: inset 0 0 0 3px rgb(126, 86, 34);
+  background-repeat: no-repeat;
+  background-position: center 35px;
+  color: #fee6a8;
+}
+
+#late-act:hover {
+  color: #45283c;
+  background-image: url('asset/latest-activity-black.png');
+  box-shadow: inset 0 0 0 3px #45283c;
+}
+
+#late-act::before,
+#late-act::after {
+  background-color: rgb(179, 123, 49);
+}
+
+#late-act::before {
+  box-shadow: inset 0 -1.5px 0 1.5px rgb(126, 86, 34);
+}
+
+#late-act::after {
+  box-shadow: inset -1.5px 0 0 1.5px rgb(126, 86, 34);
+}
+
+#late-act:hover::before {
+  box-shadow: inset 0 -1.5px 0 1.5px #45283c;
+}
+
+#late-act:hover::after {
+  box-shadow: inset -1.5px 0 0 1.5px #45283c;
+}
+
 /* =============
    === BRICK ===
    ============= */
@@ -397,7 +465,7 @@ h3 {
   grid-gap: 0.5rem;
   grid-template-rows: repeat(4, 22%);
   height: 20rem;
-  width: 98%;
+  width: 94%;
   background-color: var(--bg-bg-brick);
   padding: 1rem;
   z-index: 0;
