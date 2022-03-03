@@ -379,6 +379,53 @@ h3 {
    === ABOUT ===
    ============= */
 
+#mc-server {
+  background-image: url('asset/mc-landscape.png');
+  background-size: 100% 100%;
+  box-shadow: inset 0 0 0 3px #456983;
+}
+
+#mc-server:hover {
+  background-image: url('asset/mc-landscape-hover.png');
+  box-shadow: inset 0 0 0 3.3px black;
+}
+
+@media (max-width: 450px) {
+  #mc-server {
+    background-image: url('asset/grass-block.png');
+    background-size: 240px 240px;
+    background-position: center 100%;
+    background-color: #7ec0ee;
+  }
+
+  #mc-server:hover {
+    background-image: url('asset/grass-block-hover.png');
+  }
+}
+
+#mc-server::before,
+#mc-server::after {
+  background-color: #6294b8;
+}
+
+#mc-server::before {
+  box-shadow: inset 0 -1.5px 0 1.5px #456983;
+}
+
+#mc-server:hover::before {
+  box-shadow: inset 0 -1.5px 0 1.5px black;
+}
+
+#mc-server::after {
+  box-shadow: inset -1.5px 0 0 1.5px #456983;
+}
+
+#mc-server:hover::after {
+  box-shadow: inset -1.5px 0 0 1.5px black;
+}
+
+/* ======================================== */
+
 #free-lesson {
   background-image: url('asset/books.png');
   background-size: 210px 210px;
